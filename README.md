@@ -1,2 +1,2 @@
 # Portfolio
-It is all about my profile
+It is all about my profile. Responsive Design.HTML,CSS,BOOTSTRAP is used along with a little bit JS.
