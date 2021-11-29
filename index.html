@@ -48,8 +48,7 @@
                         </li>
                         <li class="nav-item me-4">
                             <a class="nav-link active text-light navbar-shortcutlink" aria-current="page"
-                                href="#my-project">MY
-                                WORK</a>
+                                href="#my-project">PROJECTS</a>
                         </li>
                         <li class="nav-item me-5">
                             <a class="nav-link active text-light navbar-shortcutlink" aria-current="page"
@@ -57,7 +56,7 @@
                         </li>
                         <li class="nav-item me-4 ms-lg-5">
                             <button class="navbar-resume-btn request-callback"
-                                onclick="window.open('https://tanveer-610.github.io/CV/')">RESUME</button>
+                                onclick="window.open('https://drive.google.com/file/d/1lXIxqFrWJ0yPb8m1UgaCazcZaVwpiAIE/view?usp=sharing')">RESUME</button>
                         </li>
                     </ul>
                 </div>
@@ -78,9 +77,11 @@
                             </h4>
                             <div class="click-button d-flex me-btn">
                                 <button class="get-resume-btn request-callback"
-                                    onclick="window.open('https://tanveer-610.github.io/CV/')">GET
+                                    onclick="window.open('https://drive.google.com/file/d/1lXIxqFrWJ0yPb8m1UgaCazcZaVwpiAIE/view?usp=sharing')">GET
                                     RESUME</button>
-                                <button class="about-me-btn ms-3">ABOUT ME</button>
+                                <button class="about-me-btn ms-3"><a class="text-decoration-none"
+                                        href="#contact-with-me">CONTACT
+                                        ME</a></button>
                             </div>
                         </div>
                     </div>
@@ -97,7 +98,7 @@
                     <a href="https://www.facebook.com/tanvirul.islam.332/" target="_blank">
                         <li><i class="fab fa-facebook"></i></li>
                     </a>
-                    <a href="https://www.linkedin.com/in/tanvirul-islam-6345761b4/" target="_blank">
+                    <a href="https://www.linkedin.com/in/tanvir-ul-islam/" target="_blank">
                         <li><i class="fab fa-linkedin"></i></li>
                     </a>
                     <a href="https://github.com/tanveer-610" target="_blank">
@@ -332,7 +333,7 @@
         <!-- --------------------------------my work(project) section is start here------------------------------- -->
         <section class="my-work" id="my-project">
             <div>
-                <h1 class="text-center text-light py-4"><span class="heading-style">My Project</span> Work</h1>
+                <h1 class="text-center text-light py-4"><span class="heading-style">My </span> Projects</h1>
                 <div class="container">
                     <div id="carouselExampleIndicators" class="carousel slide mt-5" data-bs-ride="carousel">
                         <div class="carousel-indicators">
@@ -506,20 +507,29 @@
             <div class="container">
                 <div class="row g-lg-2 gy-2 text-light">
                     <div class="col-lg-6">
-                        <div class="p-5">
+                        <div class="p-3">
                             <p class="mb-5">In the project show casing, I am showing my project. If anyone is interested
                                 to work with
                                 me then contact with me. I am eagerly work with you. Please notify me.</p>
-                            <a class="hire-btn text-light" href="mailto:tanvirul35-2779@diu.edu.bd">HIRE ME</a>
+                            <div>
+                                <p><i class="far fa-envelope"></i> &nbsp; tanvirul35-2779@diu.edu.bd</p>
+                                <p><i class="fas fa-phone"></i> &nbsp; 01855253284</p>
+                                <p><i class="fab fa-whatsapp"></i> &nbsp; 01855253284</p>
+                                <address>H#40,Rupali Bazar Para,Ujantia,Pekua,Cox's Bazar</address>
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <div class="p-5">
-                            <p><i class="far fa-envelope"></i> &nbsp; tanvirul35-2779@diu.edu.bd</p>
-                            <p><i class="fas fa-phone"></i> &nbsp; 01855253284</p>
-                            <p><i class="fab fa-whatsapp"></i> &nbsp; 01855253284</p>
-                            <address>H#40,Rupali Bazar Para,Ujantia,Pekua,Cox's Bazar</address>
-                        </div>
+                        <form action="">
+                            <textarea name="msg" id="msg-id" cols="20" rows="6"
+                                class="form-control my-3 bg-dark text-white"
+                                placeholder="Write Your message here"></textarea>
+                            <button class="btn contact-btn-style me-3 px-3" onclick="sendMsg()"> SUBMIT
+                                <i class="fas fa-arrow-right ps-1 btn-icon1"></i>
+                            </button>
+                            <button class="btn contact-btn-style px-3" type="reset">RESET<i
+                                    class="fas fa-times ps-2 btn-icon2"></i></a></button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -531,7 +541,7 @@
                 <a class="text-light" href="https://www.facebook.com/tanvirul.islam.332/" target="_blank">
                     <li><i class="fab fa-facebook fa-2x"></i></li>
                 </a>
-                <a class="text-light" href="https://www.linkedin.com/in/tanvirul-islam-6345761b4/" target="_blank">
+                <a class="text-light" href="https://www.linkedin.com/in/tanvir-ul-islam/" target="_blank">
                     <li><i class="fab fa-linkedin fa-2x"></i></li>
                 </a>
                 <a class="text-light" href="https://github.com/tanveer-610" target="_blank">
@@ -541,13 +551,17 @@
                     <li><i class="fab fa-codepen fa-2x"></i></li>
                 </a>
             </ul>
-            <p class="text-light text-center">Made With <i class="fas fa-heart fa-2x"
-                    style="color: rgb(202, 51, 51);"></i> By
-                Tanvirul Islam</p>
             <p class="text-light text-center">&copy; Copyright Reserved 2021.</p>
         </div>
     </footer>
 
+
+    <script>
+        function sendMsg() {
+            var msgBody = document.getElementById('msg-id').value;
+            window.open('mailto:tanvirul35-2779@diu.edu.bd?subject=subject&body=' + msgBody);
+        }
+    </script>
     <!-- --------------------------JavaScript cdn adding ----------------------------------- -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"

@@ -111,6 +111,9 @@ header{
 .about-me-btn:hover{
     background-color: #00CF5D;
 }
+.about-me-btn a:hover{
+    color: white;
+}
 .intro-pic-div{
     transition: 1s transform;
 }
@@ -255,7 +258,34 @@ header{
 .hire-btn:hover{
         background-color: #00CF5D;
 }
-
+.contact-btn-style{
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 18px;
+    background-color: #00CF5D;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.contact-btn-style:hover {   
+    background-image: radial-gradient(#3cbe77,#51be82,#30db7d);
+    color: white;
+    transform: scale(1.2);
+}
+.contact-btn-style .btn-icon1, .contact-btn-style .btn-icon2{
+    display: inline-block;
+}
+.contact-btn-style:hover .btn-icon1{
+    animation: shakeX;
+    animation-duration: 3s; 
+    animation-iteration-count: infinite;
+  }
+  .contact-btn-style:hover .btn-icon2{
+    animation: tada;
+    animation-duration: 1s; 
+    animation-iteration-count: infinite;
+  }
 /* ---------------------------------footer section starts here--------------------------- */
 footer{
     background-color: black;
