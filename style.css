@@ -232,6 +232,18 @@ header{
     border-radius: 10px;
     color: white;
 }
+.btn-tech-details{
+    padding: 5px 10px;
+    background-color:#00CF5D;
+    margin-right:5px ;
+    border: none;
+    border-radius: 10px;
+    color: white;
+}
+.btn-tech-details a:hover{
+    color:white;
+   
+}
 .project-destination{
     color: rgb(90, 88, 88);
     font-size: 25px;
@@ -240,7 +252,10 @@ header{
 .c-class-img{
     width: 60%;
 }
-
+/* Blogs----*/
+.blogs{
+    background-color: #171C22;
+}
 
 /* -----------------------------contact me section style starts------------------------ */
 .contact-me{
@@ -286,6 +301,12 @@ header{
     animation-duration: 1s; 
     animation-iteration-count: infinite;
   }
+  /*---------------details----------------*/
+  .details{
+    background-color:#111A28; 
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
 /* ---------------------------------footer section starts here--------------------------- */
 footer{
     background-color: black;
