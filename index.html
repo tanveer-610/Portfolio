@@ -1,557 +1,321 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tanvir</title>
-
-    <!-- --------------------------favicon adding ----------------------------------- -->
-    <link rel="shortcut icon" href="Images/Icons/favicon.svg" type="image/x-icon">
-    <!-- --------------------------bootstrap css style(cdn) adding ----------------------------------- -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- --------------------------fontawesome icon kit ----------------------------------- -->
-    <script src="https://kit.fontawesome.com/04ecdf395d.js" crossorigin="anonymous"></script>
-    <!-- --------------------------custom style adding ----------------------------------- -->
-    <link rel="stylesheet" href="style.css">
-    <!-- --------------------------animation style(cdn) adding ----------------------------------- -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tanvirul Islam — Software Engineer</title>
+  <meta name="description" content="Tanvirul Islam — backend-leaning full-stack engineer building payment infrastructure (PayNext) and multi-tenant travel platforms (FirstTrip) at TechnoNext Software Ltd.">
+  <meta name="theme-color" content="#0e100f">
+  <meta property="og:title" content="Tanvirul Islam — Software Engineer">
+  <meta property="og:description" content="Payment rails, multi-tenant platforms, and the frontends that sit on top of them.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/profile.jpg">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    document.documentElement.classList.add('js');
+    try { var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
 </head>
-
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <div class="container">
-                <a class="navbar-brand text-light" href="#"> <i class="fab fa-tumblr nav-logo"></i>
-                    <span class="logo-name">TANVIR</span></a>
-                <button class="navbar-toggler text-light" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+  <a class="skip" href="#main">Skip to content</a>
 
-                        <li class="nav-item me-4">
-                            <a class="nav-link active text-light navbar-shortcutlink" aria-current="page"
-                                href="#about-mine">ABOUT
-                                ME</a>
-                        </li>
-                        <li class="nav-item me-4">
-                            <a class="nav-link active text-light navbar-shortcutlink" aria-current="page"
-                                href="#my-skills">SKILLS</a>
-                        </li>
-                        <li class="nav-item me-4">
-                            <a class="nav-link active text-light navbar-shortcutlink" aria-current="page"
-                                href="#my-project">PROJECTS</a>
-                        </li>
-                        <li class="nav-item me-4">
-                            <a class="nav-link active text-light navbar-shortcutlink" aria-current="page"
-                                href="#blogs">Blogs</a>
-                        </li>
-                        <li class="nav-item me-5">
-                            <a class="nav-link active text-light navbar-shortcutlink" aria-current="page"
-                                href="#contact-with-me">CONTACT ME</a>
-                        </li>
-                        <li class="nav-item me-4 ms-lg-5">
-                            <button class="navbar-resume-btn request-callback"
-                                onclick="window.open('https://drive.google.com/file/d/1lXIxqFrWJ0yPb8m1UgaCazcZaVwpiAIE/view?usp=sharing')">RESUME</button>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+  <header class="nav" id="top">
+    <div class="wrap nav__inner">
+      <a class="brand" href="#top" aria-label="Tanvirul Islam, home">
+        <span class="brand__mark">TI</span>
+        <span class="brand__name">Tanvirul Islam</span>
+      </a>
+      <nav class="nav__links" id="nav-links" aria-label="Primary">
+        <a href="#work">Work</a>
+        <a href="#stack">Stack</a>
+        <a href="#journey">Journey</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav__actions">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle colour theme">
+          <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+        <button class="icon-btn menu-btn" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
 
-        <section class="heading-banner">
-            <div class="container">
-                <div class="row gy-2 g-lg-2 mt-5">
-                    <div class="col-lg-7 d-flex align-items-center">
-                        <div class="intro">
-                            <h4 class="greetings">Hello!!! Visitors I am...</h4>
-                            <h1 class="animate__animated animate__fadeInDown">Tanvirul Islam</h1>
-                            <h2>Full Stack Web Developer</h2>
-                            <h4 class="animate__animated animate__fadeInUp text-light"> Software Engineer <span>|</span>
-                                Developer
-                                <span>|</span> Problem Solver
-                            </h4>
-                            <div class="click-button d-flex me-btn">
-                                <button class="get-resume-btn request-callback"
-                                    onclick="window.open('https://drive.google.com/file/d/1lXIxqFrWJ0yPb8m1UgaCazcZaVwpiAIE/view?usp=sharing')">GET
-                                    RESUME</button>
-                                <button class="about-me-btn ms-3"><a class="text-decoration-none"
-                                        href="#contact-with-me">CONTACT
-                                        ME</a></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 d-flex align-items-center">
-                        <div class="intro-pic-div">
-                            <img src="images/Icons/profilePic.png" class="img-fluid" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- -------------------------------------float icon section starts here---------------------------------------- -->
-            <div class="float-icon">
-                <ul>
-                    <a href="https://www.facebook.com/tanvirul.islam.332/" target="_blank">
-                        <li><i class="fab fa-facebook"></i></li>
-                    </a>
-                    <a href="https://www.linkedin.com/in/tanvir-ul-islam/" target="_blank">
-                        <li><i class="fab fa-linkedin"></i></li>
-                    </a>
-                    <a href="https://github.com/tanveer-610" target="_blank">
-                        <li><i class="fab fa-github"></i></li>
-                    </a>
-                    <a href="https://codepen.io/tanveer-610" target="_blank">
-                        <li><i class="fab fa-codepen"></i></li>
-                    </a>
-                </ul>
-                <div>
-                    <p class="follow-me text-light">Follow Me</p>
-                </div>
-            </div>
-        </section>
-    </header>
-
-
-    <main>
-        <!-- ---------------------------------------about me section starts here------------------------ -->
-        <section class="aboutme" id="about-mine">
-            <div>
-                <div class="container">
-                    <h1 class="text-center text-light py-4"><span class="heading-style">About </span>Me</h1>
-                    <div class="row g-lg-2 gy-2 d-flex align-items-center">
-                        <div class="col-lg-5">
-                            <div class="p-3 annim-bg">
-                                <img src="images/Icons/coder.gif" class="img-fluid" alt="">
-                            </div>
-                        </div>
-                        <div class="col-lg-7">
-                            <div class="p-3 d-flex align-items-center">
-
-                                <blockquote class="text-muted text-light ms-lg-5">
-                                    <p class="text-center"><i class="fas fa-quote-left fa-2x"></i> &nbsp;<i
-                                            class="fas fa-quote-right fa-2x"></i>
-                                        <br>
-                                    </p>
-                                    <span class="quote"><i>Hi, I am Tanvirul Islam. I am a student of Software
-                                            Engineering Department. Cureently I
-                                            am in Third year of my BSc. course. I am a passionate Web Developer with a
-                                            good
-                                            design
-                                            sense. I am well at case study based question. I love to solve my problem
-                                            with
-                                            JavaScript and PHP. To know more about me check my skils and
-                                            projects. <br />
-                                            Along with web development, I am continuously solving problems in online
-                                            judge using C/C++. I have sound knowledge of JAVA and JAVA Swing. Using Java
-                                            I developed a POS System which is designed with Java Swing. Overall I am
-                                            very keen on something new.
-                                        </i></span> <br> <br>
-                                    <p class="text-center"><i>-Tanvirul Islam</i></p>
-                                </blockquote>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- --------------------------------------skill set section starts here------------------------------------ -->
-        <section class="skills-section" id="my-skills">
-            <div class="container">
-                <h1 class="text-center text-light py-4">My <span class="heading-style">SkillSet</span>
-                </h1>
-                <div class="develeopment py-5 my-3">
-                    <h2 class="text-light text-lg-start text-center"><span class="card-heading-style">Web</span>
-                        Development</h2>
-                    <div class="row row-cols-1 row-cols-lg-4 gy-4 g-lg-5">
-                        <div class="col text-center p-2">
-                            <div class="card h-100 p-3 cards-style">
-                                <i class="fab fa-html5 fa-5x" style="color:#DD4B25;"></i>
-                                <div class="card-body">
-                                    <h5 class="card-title text-light">HTML5</h5>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar progress-style" role="progressbar text-muted"
-                                        style="width: 95%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">95%
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col text-center p-2">
-                            <div class="card h-100 p-3 cards-style">
-                                <i class="fab fa-css3 fa-5x" style="color:#15AABF;"></i>
-                                <div class="card-body">
-                                    <h5 class="card-title text-light">CSS3</h5>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar progress-style" role="progressbar text-muted"
-                                        style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">90%
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col text-center p-2">
-                            <div class="card h-100 p-3 cards-style">
-                                <i class="fab fa-bootstrap fa-5x" style="color:#4C6EF5;"></i>
-                                <div class="card-body">
-                                    <h5 class="card-title text-light">BOOTSTRAP4</h5>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar progress-style" role="progressbar text-muted"
-                                        style="width: 85%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">85%
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col text-center p-2">
-                            <div class="card h-100 p-3 cards-style">
-                                <div class="d-flex justify-content-center p-4">
-                                    <img src="images/Icons/tailwind.svg" class="img-fluid w-25" alt="">
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title text-light">TAILWIND</h5>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar progress-style" role="progressbar text-muted"
-                                        style="width: 55%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">55%
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <!-- -----------------------------------------core language card-------------------------------- -->
-                <div class="develeopment py-5 my-3">
-                    <h2 class="text-light text-lg-end text-center">Programming<span class="card-heading-style">
-                            Language</span></h2>
-                    <div class="row row-cols-1 row-cols-lg-4 gy-4 g-lg-5">
-                        <div class="col text-center p-2">
-                            <div class="card h-100 p-3 cards-style">
-                                <i class="fab fa-cuttlefish fa-5x" style="color:#6395CC;"></i>
-                                <div class="card-body">
-                                    <h5 class="card-title text-light">C Programming</h5>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar progress-style" role="progressbar text-muted"
-                                        style="width: 80%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">80%
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col text-center p-2">
-                            <div class="card h-100 p-3 cards-style">
-                                <i class="fab fa-java fa-5x" style="color:#005697;"></i>
-                                <div class="card-body">
-                                    <h5 class="card-title text-light">JAVA</h5>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar progress-style" role="progressbar text-muted"
-                                        style="width: 80%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">80%
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col text-center p-2">
-                            <div class="card h-100 p-3 cards-style">
-                                <i class="fab fa-js fa-5x" style="color:#EFD81D;"></i>
-                                <div class="card-body">
-                                    <h5 class="card-title text-light">JavaScript</h5>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar progress-style" role="progressbar text-muted"
-                                        style="width: 45%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">45%
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col text-center p-2">
-                            <div class="card h-100 p-3 cards-style">
-                                <div class="d-flex justify-content-center p-2">
-                                    <img src="images/Icons/c++.jpg" class="img-fluid w-25" alt="">
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title text-light">C++</h5>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar progress-style" role="progressbar text-muted"
-                                        style="width: 85%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">85%
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <!-- -----------------------------------------tools card-------------------------------- -->
-                <div class="develeopment py-5 mt-3">
-                    <h2 class="text-light text-lg-start text-center"><span class="card-heading-style">Familiar</span>
-                        Tools</h2>
-                    <div class="row row-cols-1 row-cols-lg-4 gy-4 g-lg-5">
-                        <div class="col text-center p-2">
-                            <div class="card h-100 p-3 cards-style">
-                                <i class="fab fa-microsoft fa-5x" style="color:#005697;"></i>
-                                <div class="card-body">
-                                    <h5 class="card-title text-light">Microsoft Office</h5>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar progress-style" role="progressbar text-muted"
-                                        style="width: 85%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">85%
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col text-center p-2">
-                            <div class="card h-100 p-3 cards-style">
-                                <i class="fab fa-git-alt fa-5x" style="color:#E84E31;"></i>
-                                <div class="card-body">
-                                    <h5 class="card-title text-light">Git</h5>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar progress-style" role="progressbar text-muted"
-                                        style="width: 75%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">75%
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col text-center p-2">
-                            <div class="card h-100 p-3 cards-style">
-                                <i class="fab fa-github fa-5x" style="color: white;"></i>
-                                <div class="card-body">
-                                    <h5 class="card-title text-light">GitHub</h5>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar progress-style" role="progressbar text-muted"
-                                        style="width: 75%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">75%
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- --------------------------------my work(project) section is start here------------------------------- -->
-        <section class="my-work" id="my-project">
-            <div>
-                <h1 class="text-center text-light py-4"><span class="heading-style">My </span> Projects</h1>
-                <div class="container">
-                    <div id="carouselExampleIndicators" class="carousel slide mt-5" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                                class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                                aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                                aria-label="Slide 3"></button>
-
-                        </div>
-                        <div class="carousel-inner text-center">
-                            <div class="carousel-item active">
-                                <div class="project-card card my-3">
-                                    <div class="row g-0 d-lg-flex align-items-center">
-                                        <div class="col-lg-5 ms-lg-5">
-                                            <img class="img-fluid d-block w-100 p-5 ms-lg-5"
-                                                src="images/ProjectPic/dailySalesProjectJava.JPG" alt="">
-                                        </div>
-                                        <div class="col-lg-6 me-lg-5">
-                                            <div class="card-body text-light me-lg-5">
-                                                <h3 class="card-title heading-project">Daily Sales Record</h3>
-                                                <p class="card-text">This is a sales inventory project done with JAVA.
-                                                    Design with JAVA GUI and MySQL Database used to store data. There is
-                                                    two view.One is Admin another is manager.</p>
-                                                <button class="btn-tech-used">JAVA</button>
-                                                <button class="btn-tech-used">JAVA GUI</button>
-                                                <button class="btn-tech-used">MySQL</button>
-                                                <button class="btn-tech-details"><a href="DailySales.html"
-                                                        target="_blank">Details</a></button>
-
-                                                <p></p>
-                                                <p>Documentation - GitHub</p>
-                                                <a href="https://docs.google.com/document/d/1LQKxdCc6uwhHVIhrz4HA66rJ9CkKP8m3/edit?usp=sharing&ouid=112652206194805165946&rtpof=true&sd=true"
-                                                    target="_blank"><i
-                                                        class="project-destination fas fa-external-link-alt"></i></a>
-                                                <a href="https://github.com/tanveer-610/SAD_Project-Daily-Sales-Record-"
-                                                    target="_blank"><i
-                                                        class="project-destination fab fa-github"></i></a>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="project-card card my-3">
-                                    <div class="row g-0 d-lg-flex align-items-center">
-                                        <div class="col-lg-5 ms-lg-5">
-                                            <img class="img-fluid d-block w-100 p-5 ms-lg-5"
-                                                src="images/ProjectPic/carhouse.JPG" alt="">
-                                        </div>
-                                        <div class="col-lg-6 me-lg-5">
-                                            <div class="card-body text-light me-lg-5">
-                                                <h3 class="card-title heading-project">Car House</h3>
-                                                <p class="card-text">This is a selling website.
-                                                    This app is created by React, react route,react bootstrap, firebase
-                                                    node js and mongodb. It helps to find out your car with cheaper
-                                                    price.</p>
-                                                <button class="btn-tech-used">JS</button>
-                                                <button class="btn-tech-used">REACT</button>
-                                                <button class="btn-tech-used">NODE.js</button>
-                                                <button class="btn-tech-used">MongoDB</button>
-                                                <button class="btn-tech-details"><a href="carhouse.html"
-                                                        target="_blank">Details</a></button>
-
-                                                <p></p>
-                                                <p>Server Repo - Live - Client Repo</p>
-
-                                                <a href="https://github.com/tanveer-610/car-server-side"
-                                                    target="_blank"><i
-                                                        class="project-destination fab fa-github"></i></a>
-
-                                                <a href="https://car-house-e46f8.web.app/" target="_blank"><i
-                                                        class="project-destination fas fa-external-link-alt"></i></a>
-                                                <a href="https://github.com/tanveer-610/car-client-side"
-                                                    target="_blank"><i
-                                                        class="project-destination fab fa-github"></i></a>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="project-card card my-3">
-                                    <div class="row g-0 d-lg-flex align-items-center">
-                                        <div class="col-lg-5 ms-lg-5">
-                                            <img class="img-fluid d-block w-100 p-5 ms-lg-5"
-                                                src="images/ProjectPic/deliver.JPG" alt="">
-                                        </div>
-                                        <div class="col-lg-6 me-lg-5">
-                                            <div class="card-body text-light me-lg-5">
-                                                <h3 class="card-title heading-project">deliverEx</h3>
-                                                <p class="card-text">This is a delivery website.
-                                                    This app is created by React, react route,react bootstrap, firebase
-                                                    node js and mongodb. It helps to find out best delivery service
-                                                    ever.</p>
-                                                <button class="btn-tech-used">JS</button>
-                                                <button class="btn-tech-used">REACT</button>
-                                                <button class="btn-tech-used">NODE.js</button>
-                                                <button class="btn-tech-used">MongoDB</button>
-                                                <button class="btn-tech-details"><a href="deliverEx.html"
-                                                        target="_blank">Details</a></button>
-
-                                                <p></p>
-                                                <p>Server Repo - Live - Client Repo</p>
-
-                                                <a href="https://github.com/tanveer-610/deliverEx-server-side"
-                                                    target="_blank"><i
-                                                        class="project-destination  fab fa-github "></i></a>
-
-                                                <a href="https://deliveryex-3c3e1.web.app/" target="_blank"><i
-                                                        class="project-destinationfas fa-external-link-alt"></i></a>
-                                                <a href="https://github.com/tanveer-610/deliverEx-client-side"
-                                                    target="_blank"><i
-                                                        class="project-destination  fab fa-github "></i></a>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- ------------blogs section starts here------------- -->
-        <section class="blogs" id="blogs">
-            <h1 class="text-center text-light py-4"><span class="heading-style">My</span> Blogs</h1>
-            <div class="container">
-                <h3 class="text-muted mb-0 pb-4 text-center">Blogs are available soon</h3>
-            </div>
-        </section>
-        <!-- ---------------------------------------------contact me section starts here-------------------- -->
-
-        <section class="contact-me" id="contact-with-me">
-            <h1 class="text-center text-light py-4">Contact<span class="heading-style"> Me</span> </h1>
-            <div class="container">
-                <div class="row g-lg-2 gy-2 text-light">
-                    <div class="col-lg-6">
-                        <div class="p-3">
-                            <p class="mb-5">In the project show casing, I am showing my project. If anyone is interested
-                                to work with
-                                me then contact with me. I am eagerly work with you. Please notify me.</p>
-                            <div>
-                                <p><i class="far fa-envelope"></i> &nbsp; tanvirul35-2779@diu.edu.bd</p>
-                                <p><i class="fas fa-phone"></i> &nbsp; 01855253284</p>
-                                <p><i class="fab fa-whatsapp"></i> &nbsp; 01855253284</p>
-                                <address>H#40,Rupali Bazar Para,Ujantia,Pekua,Cox's Bazar</address>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <form action="">
-                            <textarea name="msg" id="msg-id" cols="20" rows="6"
-                                class="form-control my-3 bg-dark text-white"
-                                placeholder="Write Your message here"></textarea>
-                            <button class="btn contact-btn-style me-3 px-3" onclick="sendMsg()"> SUBMIT
-                                <i class="fas fa-arrow-right ps-1 btn-icon1"></i>
-                            </button>
-                            <button class="btn contact-btn-style px-3" type="reset">RESET<i
-                                    class="fas fa-times ps-2 btn-icon2"></i></a></button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <div>
-            <ul class="d-flex justify-content-center">
-                <a class="text-light" href="https://www.facebook.com/tanvirul.islam.332/" target="_blank">
-                    <li><i class="fab fa-facebook fa-2x"></i></li>
-                </a>
-                <a class="text-light" href="https://www.linkedin.com/in/tanvir-ul-islam/" target="_blank">
-                    <li><i class="fab fa-linkedin fa-2x"></i></li>
-                </a>
-                <a class="text-light" href="https://github.com/tanveer-610" target="_blank">
-                    <li><i class="fab fa-github fa-2x"></i></li>
-                </a>
-                <a class="text-light" href="https://codepen.io/tanveer-610" target="_blank">
-                    <li><i class="fab fa-codepen fa-2x"></i></li>
-                </a>
-            </ul>
-            <p class="text-light text-center">&copy; Copyright Reserved 2021.</p>
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero wrap">
+      <div class="hero__copy">
+        <p class="eyebrow"><span class="dot"></span> Software Engineer · TechnoNext Software Ltd.</p>
+        <h1 class="hero__title">
+          I build the rails<br>
+          money and travel<br>
+          <em>move on.</em>
+        </h1>
+        <p class="hero__lede">
+          Backend-leaning full-stack engineer. Today I work on <strong>PayNext</strong>, a payment gateway made of
+          twenty-odd services. Before that I built <strong>FirstTrip</strong>, a multi-tenant travel platform that also runs
+          as Triplover. I care about systems that stay correct when things go wrong.
+        </p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#work">See the work <span aria-hidden="true">→</span></a>
+          <a class="btn btn--ghost" href="#contact">Get in touch</a>
         </div>
-    </footer>
+      </div>
 
+      <aside class="trace" aria-label="Illustration: a payment moving through the gateway">
+        <div class="trace__bar">
+          <span class="trace__lights"><i></i><i></i><i></i></span>
+          <span class="trace__title">paynext · txn trace</span>
+          <span class="trace__live">LIVE</span>
+        </div>
+        <ol class="trace__log" id="trace-log"></ol>
+        <div class="trace__foot">
+          <span>trackingId <b id="trace-id">PY_7K2M9QX4DA</b></span>
+          <span id="trace-status" class="pill pill--wait">pending</span>
+        </div>
+      </aside>
+    </section>
 
-    <script>
-        function sendMsg() {
-            var msgBody = document.getElementById('msg-id').value;
-            window.open('mailto:tanvirul35-2779@diu.edu.bd?subject=subject&body=' + msgBody);
-        }
-    </script>
-    <!-- --------------------------JavaScript cdn adding ----------------------------------- -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+    <!-- QUICK FACTS -->
+    <section class="facts wrap" aria-label="At a glance">
+      <div class="fact"><span class="fact__num">20+</span><span class="fact__label">services in the PayNext gateway</span></div>
+      <div class="fact"><span class="fact__num">3</span><span class="fact__label">travel brands on one FirstTrip codebase</span></div>
+      <div class="fact"><span class="fact__num">Java 25</span><span class="fact__label">Spring Boot 4, Kafka, Redis Cluster</span></div>
+      <div class="fact"><span class="fact__num">React 19</span><span class="fact__label">checkout, merchant and admin portals</span></div>
+    </section>
+
+    <!-- WORK -->
+    <section class="section" id="work">
+      <div class="wrap">
+        <header class="section__head">
+          <p class="kicker">01 — Selected work</p>
+          <h2>Production systems, not side projects.</h2>
+        </header>
+
+        <article class="case reveal">
+          <div class="case__meta">
+            <span class="tag tag--accent">Now</span>
+            <span class="case__org">TechnoNext Software Ltd.</span>
+          </div>
+          <h3 class="case__title">PayNext: payment gateway</h3>
+          <p class="case__summary">
+            A payment service orchestrator that lets merchants accept cards, mobile wallets and net banking through one
+            integration. It covers hosted and embedded checkout, a card-data vault, merchant and admin portals, settlement
+            batches and signed webhooks.
+          </p>
+
+          <div class="case__grid">
+            <div class="case__col">
+              <h4>What I work on</h4>
+              <ul class="ticks">
+                <li><b>Card-data security.</b> Each checkout session gets its own ECDH key, and card secrets are encrypted in the browser with AES-GCM via HKDF before they leave the page.</li>
+                <li><b>Payment channels.</b> Visa, Mastercard and AMEX through acquirer banks, bKash wallets, and City Touch net banking, all routed through one processor and integration layer.</li>
+                <li><b>Merchant webhooks (IPN).</b> One final, signed notification per order. Payloads are signed with rotating merchant credentials, and retries are safe.</li>
+                <li><b>Notification platform.</b> Email, SMS, push (FCM) and webhooks, with per-category provider chains and ordered failover.</li>
+                <li><b>Rates and reconciliation.</b> Versioned TDR/MDR rates with effective windows, BIN ranges, refunds, and batch settlement files.</li>
+                <li><b>Embedded SDK.</b> A checkout iframe merchants can drop into their own pages, with origin allow-lists and Playwright end-to-end tests.</li>
+              </ul>
+            </div>
+            <div class="case__col case__col--side">
+              <h4>Architecture</h4>
+              <div class="flow" aria-label="Request flow">
+                <span>Checkout app</span><i></i>
+                <span>Checkout API</span><i></i>
+                <span>Processor</span><i></i>
+                <span>Integration</span><i></i>
+                <span>Bank / MFS</span>
+              </div>
+              <p class="muted small">Plus card-data, fraud, notification, link-payment, report, batch, merchant and admin services. They talk over tiered REST (public, portal and inter-service) and Kafka.</p>
+              <h4>Stack</h4>
+              <ul class="chips">
+                <li>Java 25</li><li>Spring Boot 4</li><li>Kafka</li><li>Redis Cluster</li><li>MySQL</li><li>Flyway</li><li>MinIO</li><li>React 19</li><li>Vite</li><li>TypeScript</li><li>Playwright</li><li>GitLab CI</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="case reveal">
+          <div class="case__meta">
+            <span class="tag">Previously</span>
+            <span class="case__org">TechnoNext Software Ltd.</span>
+          </div>
+          <h3 class="case__title">FirstTrip: multi-tenant travel platform</h3>
+          <p class="case__summary">
+            An online travel agency platform for hotels, tours and visas. It was built tenant-first, so the same deployment
+            serves several travel brands, each with its own branding, invoices and configuration.
+          </p>
+
+          <div class="tenants" aria-label="Brands running on the platform">
+            <span class="tenant" style="--c:#DB0011">FirstTrip</span>
+            <span class="tenant" style="--c:#4badbb">Triplover</span>
+            <span class="tenant" style="--c:#bf802a">TakeOff Travels</span>
+          </div>
+
+          <div class="case__grid">
+            <div class="case__col">
+              <h4>What I built</h4>
+              <ul class="ticks">
+                <li><b>Tenant-aware backends.</b> Hotel, Tour and Visa services resolve the tenant on every request, and invoices, refund documents, colours, watermarks and paid seals all follow the brand.</li>
+                <li><b>Supplier integration.</b> Live hotel search, pricing and booking through the TBO supplier API, mapped into the platform's own model.</li>
+                <li><b>Admin back-office.</b> Separate admin services for inventory, bookings, refunds and reporting per product line.</li>
+                <li><b>B2C frontend.</b> A Next.js and TypeScript storefront styled with Tailwind.</li>
+                <li><b>Test automation.</b> API test suites in Playwright for Java with TestNG, covering the B2B booking flows.</li>
+              </ul>
+            </div>
+            <div class="case__col case__col--side">
+              <h4>Shipped for</h4>
+              <p class="muted small">FirstTrip, plus a separate deployment for the client <b>Triplover</b>, both on the same codebase.</p>
+              <h4>Stack</h4>
+              <ul class="chips">
+                <li>Java 21</li><li>Spring Boot 3</li><li>MySQL</li><li>Next.js 14</li><li>React 18</li><li>TypeScript</li><li>Tailwind</li><li>.NET (config service)</li><li>Playwright · TestNG</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <div class="earlier reveal">
+          <header class="earlier__head">
+            <h3>Earlier builds</h3>
+            <p class="muted">Where it started: MERN apps and a Java desktop POS from my university years.</p>
+          </header>
+          <div class="earlier__grid">
+            <a class="mini" href="https://car-house-e46f8.web.app/" target="_blank" rel="noopener">
+              <img src="images/work-carhouse.webp" alt="Car House homepage screenshot" loading="lazy" width="1000" height="563">
+              <span class="mini__body">
+                <b>Car House</b>
+                <span>A car marketplace with auth, orders and admin stock management.</span>
+                <em>React · Node · MongoDB · Firebase</em>
+              </span>
+            </a>
+            <a class="mini" href="https://deliveryex-3c3e1.web.app/" target="_blank" rel="noopener">
+              <img src="images/work-deliverex.webp" alt="deliverEx homepage screenshot" loading="lazy" width="1000" height="563">
+              <span class="mini__body">
+                <b>deliverEx</b>
+                <span>A delivery-service booking site with authenticated orders.</span>
+                <em>React · Node · MongoDB · Firebase</em>
+              </span>
+            </a>
+            <a class="mini" href="https://github.com/tanveer-610/SAD_Project-Daily-Sales-Record-" target="_blank" rel="noopener">
+              <img src="images/work-dailysales.webp" alt="Daily Sales Record desktop app screenshot" loading="lazy" width="1000" height="563">
+              <span class="mini__body">
+                <b>Daily Sales Record</b>
+                <span>A desktop POS and inventory app with separate admin and manager views.</span>
+                <em>Java Swing · MySQL</em>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STACK -->
+    <section class="section section--alt" id="stack">
+      <div class="wrap">
+        <header class="section__head">
+          <p class="kicker">02 — Toolbox</p>
+          <h2>What I reach for.</h2>
+        </header>
+        <div class="stack">
+          <div class="stack__group reveal">
+            <h3><span class="num">A</span> Backend</h3>
+            <p>Java 21/25, Spring Boot 3/4, Spring Data JPA, REST API design, Kafka, Redis (standalone and cluster), MySQL, Flyway</p>
+          </div>
+          <div class="stack__group reveal">
+            <h3><span class="num">B</span> Frontend</h3>
+            <p>React 19, Next.js, TypeScript, Vite, Tailwind CSS, embeddable SDKs and iframes</p>
+          </div>
+          <div class="stack__group reveal">
+            <h3><span class="num">C</span> Payments &amp; security</h3>
+            <p>Card and MFS integrations, ECDH/HKDF/AES-GCM, HMAC signing, OTP flows, key management, webhooks</p>
+          </div>
+          <div class="stack__group reveal">
+            <h3><span class="num">D</span> Platform</h3>
+            <p>Multi-tenancy, microservices, event-driven sync, MinIO, structured logging with Log4j2 and Grafana</p>
+          </div>
+          <div class="stack__group reveal">
+            <h3><span class="num">E</span> Quality &amp; delivery</h3>
+            <p>Playwright, TestNG, Postman, GitLab CI, Git, Linux, Netlify</p>
+          </div>
+          <div class="stack__group reveal">
+            <h3><span class="num">F</span> Foundations</h3>
+            <p>Data structures and algorithms in C/C++, competitive programming, system design</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JOURNEY -->
+    <section class="section" id="journey">
+      <div class="wrap journey">
+        <header class="section__head">
+          <p class="kicker">03 — Journey</p>
+          <h2>How I got here.</h2>
+          <figure class="portrait reveal">
+            <picture>
+              <source srcset="images/profile.webp" type="image/webp">
+              <img src="images/profile.jpg" alt="Portrait of Tanvirul Islam" width="640" height="640" loading="lazy">
+            </picture>
+          </figure>
+        </header>
+        <ol class="timeline">
+          <li class="reveal">
+            <span class="timeline__when">Now</span>
+            <div>
+              <h3>Software Engineer, PayNext</h3>
+              <p class="muted">TechnoNext Software Ltd.</p>
+              <p>Payment gateway services: processor, integration, card-data, notification and merchant/admin APIs, along with their React portals.</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <span class="timeline__when">Before</span>
+            <div>
+              <h3>Software Engineer, FirstTrip OTA</h3>
+              <p class="muted">TechnoNext Software Ltd.</p>
+              <p>Multi-tenant Hotel, Tour and Visa platform, deployed for FirstTrip and the client Triplover.</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <span class="timeline__when">Start</span>
+            <div>
+              <h3>B.Sc. in Software Engineering</h3>
+              <p class="muted">Daffodil International University</p>
+              <p>MERN projects, a Java Swing POS, and a lot of C/C++ on online judges.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <div class="wrap">
+        <p class="kicker">04 — Contact</p>
+        <h2 class="contact__title">Have a hard problem<br>in payments or platforms?</h2>
+        <p class="contact__lede">I'm happy to talk about engineering roles, collaborations, or how something tricky in a payment flow works.</p>
+        <div class="contact__links">
+          <a class="btn btn--primary" href="mailto:tanvirul35-2779@diu.edu.bd">Email me <span aria-hidden="true">↗</span></a>
+          <a class="btn btn--ghost" href="https://www.linkedin.com/in/tanvir-ul-islam/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn--ghost" href="https://github.com/tanveer-610" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn btn--ghost" href="https://drive.google.com/file/d/1lXIxqFrWJ0yPb8m1UgaCazcZaVwpiAIE/view?usp=sharing" target="_blank" rel="noopener">Résumé</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <span>© <span id="year">2026</span> Tanvirul Islam</span>
+      <span class="muted">Hand-written HTML and CSS. No framework, hosted on Netlify.</span>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
 </body>
-
 </html>
