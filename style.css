@@ -246,21 +246,6 @@ body::before {
 }
 .tenant::before { content: ""; width: 12px; height: 12px; border-radius: 50%; background: var(--c); }
 
-/* ---------- Earlier ---------- */
-.earlier { margin-top: 56px; }
-.earlier__head { display: flex; justify-content: space-between; align-items: end; gap: 16px; flex-wrap: wrap; margin-bottom: 22px; }
-.earlier__head h3 { font-size: 1.6rem; }
-.earlier__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-.mini {
-  text-decoration: none; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
-  overflow: hidden; display: flex; flex-direction: column; transition: transform .25s, border-color .25s;
-}
-.mini:hover { transform: translateY(-4px); border-color: var(--muted); }
-.mini img { aspect-ratio: 16 / 9; object-fit: cover; object-position: top; width: 100%; height: auto; border-bottom: 1px solid var(--line); filter: saturate(.85); }
-.mini__body { padding: 16px 18px 20px; display: flex; flex-direction: column; gap: 6px; font-size: .92rem; color: var(--muted); }
-.mini__body b { color: var(--text); font-family: var(--display); font-size: 1.15rem; }
-.mini__body em { font: normal 500 .75rem var(--mono); color: var(--accent); margin-top: 4px; }
-
 /* ---------- Stack ---------- */
 .stack { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
 .stack__group { background: var(--bg-2); padding: 28px; }
@@ -315,7 +300,6 @@ body::before {
   .fact:nth-child(n+3) { border-top: 1px solid var(--line); }
   .case__grid { grid-template-columns: 1fr; }
   .stack { grid-template-columns: repeat(2, 1fr); }
-  .earlier__grid { grid-template-columns: repeat(2, 1fr); }
   .journey { grid-template-columns: 1fr; }
   .portrait { max-width: 220px; }
 }
@@ -334,7 +318,7 @@ body::before {
   .trace__log { min-height: 236px; font-size: .74rem; }
   .trace__log li { grid-template-columns: 50px 1fr; }
   .trace__log .ms { display: none; }
-  .stack, .earlier__grid { grid-template-columns: 1fr; }
+  .stack { grid-template-columns: 1fr; }
   .btn { flex: 1 1 auto; justify-content: center; }
 }
 
