@@ -162,6 +162,9 @@
               <h4>What I built</h4>
               <ul class="ticks">
                 <li><b>Tenant-aware backends.</b> Hotel, Tour and Visa services resolve the tenant on every request, and invoices, refund documents, colours, watermarks and paid seals all follow the brand.</li>
+                <li><b>Reporting.</b> Branded invoices, refund invoices and reports generated with JasperReports, rendered per tenant.</li>
+                <li><b>Search.</b> Fast, typo-tolerant search with Meilisearch.</li>
+                <li><b>Schema migrations.</b> Database changes versioned and rolled out with Liquibase.</li>
                 <li><b>Supplier integration.</b> Live hotel search, pricing and booking through the TBO supplier API, mapped into the platform's own model.</li>
                 <li><b>Admin back-office.</b> Separate admin services for inventory, bookings, refunds and reporting per product line.</li>
                 <li><b>B2C frontend.</b> A Next.js and TypeScript storefront styled with Tailwind.</li>
@@ -173,7 +176,7 @@
               <p class="muted small">FirstTrip, plus a separate deployment for the client <b>Triplover</b>, both on the same codebase.</p>
               <h4>Stack</h4>
               <ul class="chips">
-                <li>Java 21</li><li>Spring Boot 3</li><li>MySQL</li><li>Next.js 14</li><li>React 18</li><li>TypeScript</li><li>Tailwind</li><li>.NET (config service)</li><li>Playwright · TestNG</li>
+                <li>Java 21</li><li>Spring Boot 3</li><li>MySQL</li><li>Liquibase</li><li>JasperReports</li><li>Meilisearch</li><li>Next.js 14</li><li>React 18</li><li>TypeScript</li><li>Tailwind</li><li>.NET (config service)</li><li>Playwright · TestNG</li>
               </ul>
             </div>
           </div>
@@ -191,7 +194,7 @@
         <div class="stack">
           <div class="stack__group reveal">
             <h3><span class="num">A</span> Backend</h3>
-            <p>Java 21/25, Spring Boot 3/4, Spring Data JPA, REST API design, Kafka, Redis (standalone and cluster), MySQL, Flyway</p>
+            <p>Java 21/25, Spring Boot 3/4, Spring Data JPA, REST API design, Kafka, Redis (standalone and cluster), MySQL, Flyway, Liquibase</p>
           </div>
           <div class="stack__group reveal">
             <h3><span class="num">B</span> Frontend</h3>
@@ -203,7 +206,7 @@
           </div>
           <div class="stack__group reveal">
             <h3><span class="num">D</span> Platform</h3>
-            <p>Multi-tenancy, microservices, event-driven sync, MinIO, structured logging with Log4j2 and Grafana</p>
+            <p>Multi-tenancy, microservices, event-driven sync, Meilisearch, JasperReports, MinIO, structured logging with Log4j2 and Grafana</p>
           </div>
           <div class="stack__group reveal">
             <h3><span class="num">E</span> Quality &amp; delivery</h3>
