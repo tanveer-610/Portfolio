@@ -354,12 +354,14 @@ strong, b { font-weight: 600; color: var(--text); }
 .flow__end { color: var(--accent) !important; }
 .flow__end::before { border-color: var(--accent) !important; background: var(--accent) !important; }
 
-.tenants { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
-.tenant {
-  display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: .9rem;
-  padding: 7px 14px 7px 10px; border-radius: 999px; border: 1px solid var(--line-strong); background: var(--surface-2);
+.brands { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+.brands a {
+  display: grid; place-items: center; height: 60px; min-width: 132px; padding: 0 20px;
+  background: #ffffff; border: 1px solid var(--line-strong); border-radius: 14px;
+  box-shadow: var(--shadow-sm); transition: transform .25s var(--ease), border-color .25s, box-shadow .25s;
 }
-.tenant::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--c); box-shadow: 0 0 0 3px color-mix(in srgb, var(--c) 25%, transparent); }
+.brands a:hover { transform: translateY(-3px); border-color: var(--accent); }
+.brands img { height: var(--h, 30px); width: auto; }
 
 /* =========================================================
    Skills
@@ -514,6 +516,10 @@ strong, b { font-weight: 600; color: var(--text); }
   .case__head .tag { grid-column: 1 / -1; justify-self: start; }
   .case__logo { width: 48px; height: 48px; border-radius: 14px; }
   .about__facts { grid-template-columns: 1fr; }
+  .brands { gap: 8px; flex-wrap: nowrap; }
+  .brands li { flex: 1 1 0; min-width: 0; }
+  .brands a { min-width: 0; width: 100%; height: 54px; padding: 0 8px; }
+  .brands img { height: calc(var(--h, 30px) * .82); max-width: 100%; object-fit: contain; }
   .hero__cta .btn { flex: 1 1 auto; }
   .txn { width: min(270px, 82%); }
   .stat { padding: 20px; }
