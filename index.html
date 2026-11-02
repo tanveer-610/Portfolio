@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tanvirul Islam — Software Engineer</title>
-  <meta name="description" content="Tanvirul Islam — backend-leaning full-stack engineer building payment infrastructure (PayNext) and multi-tenant travel platforms (OTA) at TechnoNext Software Ltd.">
-  <meta name="theme-color" content="#0e100f">
-  <meta property="og:title" content="Tanvirul Islam — Software Engineer">
-  <meta property="og:description" content="Payment rails, multi-tenant platforms, and the frontends that sit on top of them.">
+  <title>Tanvirul Islam — Backend Software Engineer</title>
+  <meta name="description" content="Tanvirul Islam is a backend software engineer in Dhaka who builds payment infrastructure (PayNext PSO) and multi-tenant travel platforms with Java, Spring Boot, Kafka and Redis.">
+  <meta name="theme-color" content="#0b0d0c">
+  <meta property="og:title" content="Tanvirul Islam — Backend Software Engineer">
+  <meta property="og:description" content="Payment gateways and multi-tenant platforms, built with Java and Spring Boot.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="images/profile.jpg">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script>
     document.documentElement.classList.add('js');
@@ -22,21 +22,58 @@
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
+  <div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
+
+  <!-- Icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-ext" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h8"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.1 7-12a7 7 0 0 0-14 0c0 5.9 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 5 3.4 8.3 8 9 4.6-.7 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-route" viewBox="0 0 24 24"><circle cx="6" cy="19" r="2"/><circle cx="18" cy="5" r="2"/><path d="M8 19h8.5a3.5 3.5 0 0 0 0-7h-9a3.5 3.5 0 0 1 0-7H16"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9M10.3 21a1.9 1.9 0 0 0 3.4 0"/></symbol>
+    <symbol id="i-hook" viewBox="0 0 24 24"><path d="M18 16.98h-5.99c-1.1 0-1.95.94-2.48 1.9A4 4 0 0 1 2 17c.01-.7.2-1.4.57-2"/><path d="m6 17 3.13-5.78c.53-.97.1-2.18-.5-3.1a4 4 0 1 1 6.89-4.06"/><path d="m12 6 3.13 5.73C15.66 12.7 16.9 13 18 13a4 4 0 0 1 0 8"/></symbol>
+    <symbol id="i-percent" viewBox="0 0 24 24"><path d="M19 5 5 19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 2 10 5-10 5L2 7z"/><path d="m2 17 10 5 10-5M2 12l10 5 10-5"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M8 17l2.5-3 2 2L16 12"/></symbol>
+    <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></symbol>
+    <symbol id="i-plug" viewBox="0 0 24 24"><path d="M9 2v6M15 2v6M6 8h12v4a6 6 0 0 1-12 0zM12 18v4"/></symbol>
+    <symbol id="i-server" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="7" rx="2"/><rect x="3" y="14" width="18" height="7" rx="2"/><path d="M7 6.5h.01M7 17.5h.01"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></symbol>
+    <symbol id="i-tool" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 13l-8 8-3-3 8-8-1.3-1.3a4 4 0 0 1-5-5L13 2z"/><path d="m3 21 6-6"/></symbol>
+    <symbol id="i-brain" viewBox="0 0 24 24"><path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 2 5 3 3 0 0 0 6 1V5a3 3 0 0 0-3-1zM15 4a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1-2 5 3 3 0 0 1-6 1"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="m8.5 14-1.5 8 5-3 5 3-1.5-8"/></symbol>
+    <symbol id="i-cap" viewBox="0 0 24 24"><path d="m2 9 10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5M22 9v6"/></symbol>
+    <symbol id="i-brief" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></symbol>
+  </svg>
 
   <header class="nav" id="top">
     <div class="wrap nav__inner">
-      <a class="brand" href="#top" aria-label="Tanvirul Islam, home">
+      <a class="brand" href="#top" aria-label="Tanvirul Islam, back to top">
         <span class="brand__mark">TI</span>
         <span class="brand__name">Tanvirul Islam</span>
       </a>
       <nav class="nav__links" id="nav-links" aria-label="Primary">
+        <a href="#about">About</a>
         <a href="#work">Work</a>
-        <a href="#stack">Stack</a>
-        <a href="#journey">Journey</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
+        <a class="nav__resume-m" href="Tanvirul_Islam_Resume.pdf" target="_blank" rel="noopener">Resume <svg class="ic"><use href="#i-ext"/></svg></a>
       </nav>
       <div class="nav__actions">
-        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle colour theme">
+        <a class="btn btn--sm btn--outline nav__resume" href="Tanvirul_Islam_Resume.pdf" target="_blank" rel="noopener">
+          <svg class="ic"><use href="#i-doc"/></svg> Resume
+        </a>
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch colour theme">
           <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
           <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
         </button>
@@ -49,246 +86,365 @@
 
   <main id="main">
     <!-- HERO -->
-    <section class="hero wrap">
-      <div class="hero__copy">
-        <p class="eyebrow"><span class="dot"></span> Software Engineer · TechnoNext Software Ltd.</p>
-        <h1 class="hero__title">
-          I build the rails<br>
-          money and travel<br>
-          <em>move on.</em>
-        </h1>
-        <p class="hero__lede">
-          Backend-leaning full-stack engineer. Today I work on <strong>PayNext</strong>, a payment gateway made of
-          twenty-odd services. Before that I built a multi-tenant <strong>OTA</strong> platform that runs FirstTrip,
-          Triplover and TakeOff Travels. I care about systems that stay correct when things go wrong.
-        </p>
-        <div class="hero__cta">
-          <a class="btn btn--primary" href="#work">See the work <span aria-hidden="true">→</span></a>
-          <a class="btn btn--ghost" href="#contact">Get in touch</a>
+    <section class="hero">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <p class="badge"><span class="dot"></span> Software Engineer at PayNext · TechnoNext</p>
+          <h1 class="hero__title">
+            Backend engineer building <span class="hl">payment</span> and <span class="hl">travel</span> platforms that stay up.
+          </h1>
+          <p class="hero__lede">
+            I'm <strong>Tanvirul Islam</strong>. I design Java and Spring Boot services that move money safely, scale across
+            tenants, and keep working when a bank or supplier doesn't.
+          </p>
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#work">View my work <svg class="ic"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn--ghost" href="Tanvirul_Islam_Resume.pdf" target="_blank" rel="noopener"><svg class="ic"><use href="#i-doc"/></svg> Resume</a>
+          </div>
+          <ul class="socials" aria-label="Profiles">
+            <li><a href="https://github.com/tanveer-610" target="_blank" rel="noopener" aria-label="GitHub"><svg class="ic"><use href="#i-github"/></svg></a></li>
+            <li><a href="https://www.linkedin.com/in/tanvir-ul-islam/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="ic"><use href="#i-linkedin"/></svg></a></li>
+            <li><a href="mailto:tanvirulislam72@gmail.com" aria-label="Email"><svg class="ic"><use href="#i-mail"/></svg></a></li>
+            <li class="socials__loc"><svg class="ic"><use href="#i-pin"/></svg> Dhaka, Bangladesh</li>
+          </ul>
+        </div>
+
+        <div class="hero__visual">
+          <figure class="portrait">
+            <picture>
+              <source srcset="images/profile.webp" type="image/webp">
+              <img src="images/profile.jpg" alt="Portrait of Tanvirul Islam" width="640" height="640" fetchpriority="high">
+            </picture>
+          </figure>
+
+          <aside class="txn" aria-label="Illustration: a payment moving through the gateway">
+            <div class="txn__head">
+              <span class="txn__title">Payment trace</span>
+              <span id="txn-status" class="pill pill--wait">processing</span>
+            </div>
+            <p class="txn__id">trackingId <b id="txn-id">PY_7K2M9QX4DA</b></p>
+            <ol class="txn__steps" id="txn-steps">
+              <li>Order created</li>
+              <li>Card encrypted (ECDH)</li>
+              <li>Fraud check passed</li>
+              <li>Routed to acquirer</li>
+              <li>Captured</li>
+              <li>Signed webhook sent</li>
+            </ol>
+            <div class="txn__bar"><span id="txn-bar"></span></div>
+          </aside>
         </div>
       </div>
 
-      <aside class="trace" aria-label="Illustration: a payment moving through the gateway">
-        <div class="trace__bar">
-          <span class="trace__lights"><i></i><i></i><i></i></span>
-          <span class="trace__title">paynext · txn trace</span>
-          <span class="trace__live">LIVE</span>
-        </div>
-        <ol class="trace__log" id="trace-log"></ol>
-        <div class="trace__foot">
-          <span>trackingId <b id="trace-id">PY_7K2M9QX4DA</b></span>
-          <span id="trace-status" class="pill pill--wait">pending</span>
-        </div>
-      </aside>
+      <div class="wrap">
+        <dl class="stats" aria-label="At a glance">
+          <div class="stat"><dt>Experience</dt><dd><span class="stat__num" data-count="3">3</span>+ yrs</dd></div>
+          <div class="stat"><dt>Microservices at PayNext</dt><dd><span class="stat__num" data-count="20">20</span>+</dd></div>
+          <div class="stat"><dt>Travel brands, one codebase</dt><dd><span class="stat__num" data-count="3">3</span></dd></div>
+          <div class="stat"><dt>CGPA, B.Sc. SWE</dt><dd><span class="stat__num">3.97</span></dd></div>
+        </dl>
+      </div>
     </section>
 
-    <!-- QUICK FACTS -->
-    <section class="facts wrap" aria-label="At a glance">
-      <div class="fact"><span class="fact__num">20+</span><span class="fact__label">services in the PayNext gateway</span></div>
-      <div class="fact"><span class="fact__num">3</span><span class="fact__label">travel brands on one OTA codebase</span></div>
-      <div class="fact"><span class="fact__num">Java 25</span><span class="fact__label">Spring Boot 4, Kafka, Redis Cluster</span></div>
-      <div class="fact"><span class="fact__num">React 19</span><span class="fact__label">checkout, merchant and admin portals</span></div>
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="wrap about">
+        <header class="section__head">
+          <p class="kicker">About</p>
+          <h2>Business logic first, then the code.</h2>
+        </header>
+        <div class="about__body reveal">
+          <p class="lead">
+            I'm a backend engineer who likes the parts of a system that have to be exactly right: payment states,
+            encryption boundaries, settlement numbers and tenant isolation.
+          </p>
+          <p>
+            Since 2023 I've worked on high-volume products at TechnoNext. First it was a multi-tenant travel booking platform,
+            and now it's <strong>PayNext</strong>, a Payment Systems Operator platform with cards, mobile wallets and net
+            banking. Most of my time goes into turning business requirements into clear, maintainable services, and into
+            tracing hard production issues back to their root cause.
+          </p>
+        </div>
+        <ul class="about__facts reveal">
+          <li><span>Currently</span><b>Software Engineer, PayNext</b></li>
+          <li><span>Focus</span><b>Payments, distributed systems</b></li>
+          <li><span>Core stack</span><b>Java · Spring Boot · Kafka · Redis</b></li>
+          <li><span>Based in</span><b>Dhaka, Bangladesh</b></li>
+        </ul>
+      </div>
     </section>
 
     <!-- WORK -->
-    <section class="section" id="work">
+    <section class="section section--tint" id="work">
       <div class="wrap">
-        <header class="section__head">
-          <p class="kicker">01 — Selected work</p>
-          <h2>Production systems, not side projects.</h2>
+        <header class="section__head section__head--row">
+          <div>
+            <p class="kicker">Selected work</p>
+            <h2>Production systems I've helped build.</h2>
+          </div>
+          <p class="section__note">Two platforms in production, used by real merchants and travellers every day.</p>
         </header>
 
+        <!-- PayNext -->
         <article class="case reveal">
-          <div class="case__meta">
-            <span class="tag tag--accent">Now</span>
-            <span class="case__org">TechnoNext Software Ltd.</span>
-          </div>
-          <h3 class="case__title">PayNext: payment gateway</h3>
+          <header class="case__head">
+            <div class="case__logo case__logo--pay" aria-hidden="true">PN</div>
+            <div>
+              <h3 class="case__title">PayNext: payment gateway</h3>
+              <p class="case__meta">Payment Systems Operator platform · Aug 2025 – Present</p>
+            </div>
+            <span class="tag tag--live"><span class="dot"></span> Current</span>
+          </header>
           <p class="case__summary">
-            A payment service orchestrator that lets merchants accept cards, mobile wallets and net banking through one
-            integration. It covers hosted and embedded checkout, a card-data vault, merchant and admin portals, settlement
-            batches and signed webhooks.
+            One integration for merchants to accept cards, mobile wallets and net banking. It covers checkout, a card-data
+            vault, order processing, bank integrations, notifications, settlement batches and signed webhooks, all running
+            as independent Spring Boot services.
           </p>
 
-          <div class="case__grid">
-            <div class="case__col">
-              <h4>What I work on</h4>
-              <ul class="ticks">
-                <li><b>Card-data security.</b> Each checkout session gets its own ECDH key, and card secrets are encrypted in the browser with AES-GCM via HKDF before they leave the page.</li>
-                <li><b>Payment channels.</b> Visa, Mastercard and AMEX through acquirer banks, bKash wallets, and City Touch net banking, all routed through one processor and integration layer.</li>
-                <li><b>Merchant webhooks (IPN).</b> One final, signed notification per order. Payloads are signed with rotating merchant credentials, and retries are safe.</li>
-                <li><b>Notification platform.</b> Email, SMS, push (FCM) and webhooks, with per-category provider chains and ordered failover.</li>
-                <li><b>Rates and reconciliation.</b> Versioned TDR/MDR rates with effective windows, BIN ranges, refunds, and batch settlement files.</li>
-                <li><b>Embedded SDK.</b> A checkout iframe merchants can drop into their own pages, with origin allow-lists and Playwright end-to-end tests.</li>
-              </ul>
-            </div>
-            <div class="case__col case__col--side">
-              <h4>Architecture</h4>
-              <div class="flow" aria-label="Request flow">
-                <span>Checkout app</span><i></i>
-                <span>Checkout API</span><i></i>
-                <span>Processor</span><i></i>
-                <span>Integration</span><i></i>
-                <span>Bank / MFS</span>
-              </div>
-              <p class="muted small">Plus card-data, fraud, notification, link-payment, report, batch, merchant and admin services. They talk over tiered REST (public, portal and inter-service) and Kafka.</p>
-              <h4>Stack</h4>
+          <div class="case__body">
+            <ul class="features">
+              <li class="feature">
+                <svg class="feature__ic"><use href="#i-shield"/></svg>
+                <h4>Card-data security</h4>
+                <p>A per-session ECDH key encrypts card details in the browser (HKDF + AES-GCM). Only the card vault can decrypt them.</p>
+              </li>
+              <li class="feature">
+                <svg class="feature__ic"><use href="#i-route"/></svg>
+                <h4>Payment channels</h4>
+                <p>Visa, Mastercard and AMEX through acquirer banks, plus bKash and City Touch, all behind one processor.</p>
+              </li>
+              <li class="feature">
+                <svg class="feature__ic"><use href="#i-hook"/></svg>
+                <h4>Signed webhooks (IPN)</h4>
+                <p>One final, HMAC-signed notification per order. It supports credential rotation and is safe to retry.</p>
+              </li>
+              <li class="feature">
+                <svg class="feature__ic"><use href="#i-bell"/></svg>
+                <h4>Notification platform</h4>
+                <p>Email, SMS, FCM push and webhooks, with provider chains, ordered failover and TOTP-based OTPs.</p>
+              </li>
+              <li class="feature">
+                <svg class="feature__ic"><use href="#i-percent"/></svg>
+                <h4>Rates &amp; settlement</h4>
+                <p>Versioned TDR/MDR rates with effective windows, BIN ranges, multi-store merchants and batch reconciliation.</p>
+              </li>
+              <li class="feature">
+                <svg class="feature__ic"><use href="#i-lock"/></svg>
+                <h4>Key management</h4>
+                <p>Merchant API credentials are managed in one central service, which every other service relies on for authentication and signing.</p>
+              </li>
+            </ul>
+
+            <aside class="case__side">
+              <h4 class="label">Request path</h4>
+              <ol class="flow">
+                <li>Checkout</li>
+                <li>Processor</li>
+                <li>Integration</li>
+                <li class="flow__end">Bank / MFS</li>
+              </ol>
+              <p class="muted small">Card-data, fraud, notification, batch, report, merchant and admin services connect through tiered REST and Kafka.</p>
+              <h4 class="label">Stack</h4>
               <ul class="chips">
-                <li>Java 25</li><li>Spring Boot 4</li><li>Kafka</li><li>Redis Cluster</li><li>MySQL</li><li>Flyway</li><li>MinIO</li><li>React 19</li><li>Vite</li><li>TypeScript</li><li>Playwright</li><li>GitLab CI</li>
+                <li>Java 25</li><li>Spring Boot 4</li><li>Kafka</li><li>Redis Cluster</li><li>MySQL</li><li>Flyway</li><li>MinIO</li><li>Log4j2 · Grafana</li><li>GitLab CI</li>
               </ul>
-            </div>
+            </aside>
           </div>
         </article>
 
+        <!-- OTA -->
         <article class="case reveal">
-          <div class="case__meta">
-            <span class="tag">Previously</span>
-            <span class="case__org">TechnoNext Software Ltd.</span>
-          </div>
-          <h3 class="case__title">OTA: multi-tenant travel platform</h3>
+          <header class="case__head">
+            <div class="case__logo case__logo--ota" aria-hidden="true">OTA</div>
+            <div>
+              <h3 class="case__title">OTA: multi-tenant travel platform</h3>
+              <p class="case__meta">Hotel · Tour · Visa · Nov 2023 – Jul 2025</p>
+            </div>
+            <span class="tag">Shipped</span>
+          </header>
           <p class="case__summary">
-            An online travel agency platform for hotels, tours and visas. It was built tenant-first, so the same deployment
-            serves several travel brands, each with its own branding, invoices and configuration.
+            An online travel agency platform built tenant-first: one codebase serves several travel brands, each with its
+            own branding, invoices and configuration.
           </p>
-
-          <div class="tenants" aria-label="Brands running on the platform">
+          <div class="tenants" aria-label="Brands on the platform">
             <span class="tenant" style="--c:#DB0011">FirstTrip</span>
             <span class="tenant" style="--c:#4badbb">Triplover</span>
             <span class="tenant" style="--c:#bf802a">TakeOff Travels</span>
           </div>
 
-          <div class="case__grid">
-            <div class="case__col">
-              <h4>What I built</h4>
-              <ul class="ticks">
-                <li><b>Tenant-aware backends.</b> Hotel, Tour and Visa services resolve the tenant on every request, and invoices, refund documents, colours, watermarks and paid seals all follow the brand.</li>
-                <li><b>Reporting.</b> Branded invoices, refund invoices and reports generated with JasperReports, rendered per tenant.</li>
-                <li><b>Search.</b> Fast, typo-tolerant search with Meilisearch.</li>
-                <li><b>Schema migrations.</b> Database changes versioned and rolled out with Liquibase.</li>
-                <li><b>Supplier integration.</b> Live hotel search, pricing and booking through the TBO supplier API, mapped into the platform's own model.</li>
-                <li><b>Admin back-office.</b> Separate admin services for inventory, bookings, refunds and reporting per product line.</li>
-                <li><b>B2C frontend.</b> A Next.js and TypeScript storefront styled with Tailwind.</li>
-                <li><b>Test automation.</b> API test suites in Playwright for Java with TestNG, covering the B2B booking flows.</li>
-              </ul>
-            </div>
-            <div class="case__col case__col--side">
-              <h4>Shipped for</h4>
-              <p class="muted small">FirstTrip, plus a separate deployment for the client <b>Triplover</b>, both on the same codebase.</p>
-              <h4>Stack</h4>
+          <div class="case__body">
+            <ul class="features">
+              <li class="feature">
+                <svg class="feature__ic"><use href="#i-layers"/></svg>
+                <h4>Tenant-aware services</h4>
+                <p>Hotel, Tour and Visa services work out which tenant each request belongs to, and every output follows that brand.</p>
+              </li>
+              <li class="feature">
+                <svg class="feature__ic"><use href="#i-file"/></svg>
+                <h4>JasperReports</h4>
+                <p>Branded invoices, refund invoices and business reports generated for each tenant.</p>
+              </li>
+              <li class="feature">
+                <svg class="feature__ic"><use href="#i-search"/></svg>
+                <h4>Meilisearch</h4>
+                <p>Fast, relevant search that tolerates typos across travel data.</p>
+              </li>
+              <li class="feature">
+                <svg class="feature__ic"><use href="#i-plug"/></svg>
+                <h4>Supplier integration</h4>
+                <p>Live hotel search, pricing and booking through the TBO API.</p>
+              </li>
+              <li class="feature">
+                <svg class="feature__ic"><use href="#i-bolt"/></svg>
+                <h4>Performance</h4>
+                <p>Redis caching and tuned PostgreSQL queries on high-volume booking data, with Kafka for asynchronous workflows.</p>
+              </li>
+              <li class="feature">
+                <svg class="feature__ic"><use href="#i-db"/></svg>
+                <h4>Safe migrations</h4>
+                <p>Schema changes versioned and rolled out with Liquibase, and API suites tested with Playwright and TestNG.</p>
+              </li>
+            </ul>
+
+            <aside class="case__side">
+              <h4 class="label">Shipped for</h4>
+              <p class="muted small">FirstTrip, plus a separate deployment for the client <b>Triplover</b>, both from the same codebase.</p>
+              <h4 class="label">Stack</h4>
               <ul class="chips">
-                <li>Java 21</li><li>Spring Boot 3</li><li>PostgreSQL</li><li>Kafka</li><li>Redis</li><li>Liquibase</li><li>JasperReports</li><li>Meilisearch</li><li>Next.js 14</li><li>React 18</li><li>TypeScript</li><li>Tailwind</li><li>.NET (config service)</li><li>Playwright · TestNG</li>
+                <li>Java 21</li><li>Spring Boot 3</li><li>PostgreSQL</li><li>Kafka</li><li>Redis</li><li>Liquibase</li><li>JasperReports</li><li>Meilisearch</li><li>Playwright · TestNG</li>
               </ul>
-            </div>
+            </aside>
           </div>
         </article>
       </div>
     </section>
 
-    <!-- STACK -->
-    <section class="section section--alt" id="stack">
+    <!-- SKILLS -->
+    <section class="section" id="skills">
       <div class="wrap">
         <header class="section__head">
-          <p class="kicker">02 — Toolbox</p>
-          <h2>What I reach for.</h2>
+          <p class="kicker">Skills</p>
+          <h2>The tools I work with every day.</h2>
         </header>
-        <div class="stack">
-          <div class="stack__group reveal">
-            <h3><span class="num">A</span> Backend</h3>
-            <p>Java 21/25, Spring Boot 3/4, Spring Data JPA, REST API design, Kafka, Redis (standalone and cluster), MySQL, PostgreSQL, Flyway, Liquibase</p>
+        <div class="skills">
+          <div class="skill reveal">
+            <div class="skill__head"><svg class="ic"><use href="#i-server"/></svg><h3>Backend</h3></div>
+            <ul class="chips"><li>Java 21 / 25</li><li>Spring Boot 3 / 4</li><li>Spring Data JPA</li><li>REST APIs</li><li>Microservices</li><li>Batch processing</li></ul>
           </div>
-          <div class="stack__group reveal">
-            <h3><span class="num">B</span> Frontend</h3>
-            <p>React 19, Next.js, TypeScript, Vite, Tailwind CSS, embeddable SDKs and iframes</p>
+          <div class="skill reveal">
+            <div class="skill__head"><svg class="ic"><use href="#i-bolt"/></svg><h3>Messaging &amp; cache</h3></div>
+            <ul class="chips"><li>Kafka</li><li>Event-driven design</li><li>Redis</li><li>Redis Cluster</li></ul>
           </div>
-          <div class="stack__group reveal">
-            <h3><span class="num">C</span> Payments &amp; security</h3>
-            <p>Card and MFS integrations, ECDH/HKDF/AES-GCM, HMAC signing, OTP flows, key management, webhooks</p>
+          <div class="skill reveal">
+            <div class="skill__head"><svg class="ic"><use href="#i-db"/></svg><h3>Data &amp; search</h3></div>
+            <ul class="chips"><li>MySQL</li><li>PostgreSQL</li><li>SQL Server</li><li>Meilisearch</li><li>Flyway</li><li>Liquibase</li><li>MinIO</li></ul>
           </div>
-          <div class="stack__group reveal">
-            <h3><span class="num">D</span> Platform</h3>
-            <p>Multi-tenancy, microservices, event-driven sync, Meilisearch, JasperReports, MinIO, structured logging with Log4j2 and Grafana</p>
+          <div class="skill reveal">
+            <div class="skill__head"><svg class="ic"><use href="#i-lock"/></svg><h3>Payments &amp; security</h3></div>
+            <ul class="chips"><li>Card · MFS · Net banking</li><li>ECDH / HKDF / AES-GCM</li><li>HMAC signing</li><li>TOTP</li><li>Key management</li><li>Webhooks</li></ul>
           </div>
-          <div class="stack__group reveal">
-            <h3><span class="num">E</span> Quality &amp; delivery</h3>
-            <p>Playwright, TestNG, Postman, GitLab CI, Git, Linux, Netlify</p>
+          <div class="skill reveal">
+            <div class="skill__head"><svg class="ic"><use href="#i-tool"/></svg><h3>Tooling</h3></div>
+            <ul class="chips"><li>Git</li><li>GitLab CI</li><li>Postman</li><li>Playwright</li><li>TestNG</li><li>JasperReports</li><li>Log4j2 · Grafana</li><li>Linux</li></ul>
           </div>
-          <div class="stack__group reveal">
-            <h3><span class="num">F</span> Foundations</h3>
-            <p>Data structures and algorithms in C/C++, competitive programming, system design</p>
+          <div class="skill reveal">
+            <div class="skill__head"><svg class="ic"><use href="#i-brain"/></svg><h3>Foundations</h3></div>
+            <ul class="chips"><li>Data structures</li><li>Algorithms</li><li>C / C++</li><li>System design</li><li>Multi-tenancy</li></ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- JOURNEY -->
-    <section class="section" id="journey">
-      <div class="wrap journey">
+    <!-- EXPERIENCE -->
+    <section class="section section--tint" id="experience">
+      <div class="wrap">
         <header class="section__head">
-          <p class="kicker">03 — Journey</p>
-          <h2>How I got here.</h2>
-          <figure class="portrait reveal">
-            <picture>
-              <source srcset="images/profile.webp" type="image/webp">
-              <img src="images/profile.jpg" alt="Portrait of Tanvirul Islam" width="640" height="640" loading="lazy">
-            </picture>
-          </figure>
+          <p class="kicker">Experience &amp; education</p>
+          <h2>Where I've been.</h2>
         </header>
-        <ol class="timeline">
-          <li class="reveal">
-            <span class="timeline__when">Now</span>
-            <div>
-              <h3>Software Engineer, PayNext</h3>
-              <p class="muted">TechnoNext Software Ltd.</p>
-              <p>Payment gateway services: processor, integration, card-data, notification and merchant/admin APIs, along with their React portals.</p>
+        <div class="exp">
+          <div class="exp__col">
+            <h3 class="exp__title"><svg class="ic"><use href="#i-brief"/></svg> Work</h3>
+            <ol class="timeline">
+              <li class="reveal is-current">
+                <p class="timeline__date">Aug 2025 – Present</p>
+                <h4>Software Engineer · PayNext</h4>
+                <p class="muted">Payment Systems Operator platform</p>
+                <p>Checkout, processing, integration, card, notification, admin and merchant services.</p>
+              </li>
+              <li class="reveal">
+                <p class="timeline__date">Nov 2023 – Jul 2025</p>
+                <h4>Software Engineer · TechnoNext Software Ltd.</h4>
+                <p class="muted">FirstTrip · Triplover · TakeOff Travels</p>
+                <p>Multi-tenant OTA platform for Hotel, Tour and Visa bookings.</p>
+              </li>
+              <li class="reveal">
+                <p class="timeline__date">Aug 2023 – Oct 2023</p>
+                <h4>Trainee Software Engineer · naztech Inc.</h4>
+                <p class="muted">Transaction Monitoring System · One Bank Limited</p>
+                <p>REST APIs and SQL Server query and schema optimisation.</p>
+              </li>
+            </ol>
+          </div>
+          <div class="exp__col">
+            <h3 class="exp__title"><svg class="ic"><use href="#i-cap"/></svg> Education</h3>
+            <ol class="timeline">
+              <li class="reveal">
+                <p class="timeline__date">Jan 2019 – Mar 2023</p>
+                <h4>B.Sc. in Software Engineering</h4>
+                <p class="muted">Daffodil International University</p>
+                <p class="grade">CGPA 3.97 / 4.00</p>
+              </li>
+              <li class="reveal">
+                <p class="timeline__date">2017</p>
+                <h4>Higher Secondary Certificate</h4>
+                <p class="muted">Government Science College, Dhaka</p>
+                <p class="grade">GPA 5.00 / 5.00</p>
+              </li>
+              <li class="reveal">
+                <p class="timeline__date">2015</p>
+                <h4>Secondary School Certificate</h4>
+                <p class="muted">Government Muslim High School, Chittagong</p>
+                <p class="grade">GPA 5.00 / 5.00</p>
+              </li>
+            </ol>
+            <div class="awards reveal">
+              <h3 class="exp__title"><svg class="ic"><use href="#i-award"/></svg> Honors</h3>
+              <ul>
+                <li>Dean's Award</li>
+                <li>PMI Kickoff Certification</li>
+              </ul>
             </div>
-          </li>
-          <li class="reveal">
-            <span class="timeline__when">Before</span>
-            <div>
-              <h3>Software Engineer, OTA platform</h3>
-              <p class="muted">TechnoNext Software Ltd.</p>
-              <p>Multi-tenant Hotel, Tour and Visa platform, deployed for FirstTrip and the client Triplover.</p>
-            </div>
-          </li>
-          <li class="reveal">
-            <span class="timeline__when">University</span>
-            <div>
-              <h3>B.Sc. in Software Engineering</h3>
-              <p class="muted">Daffodil International University</p>
-              <p>CGPA 3.97 / 4.00 · Jan 2019 – Mar 2023</p>
-            </div>
-          </li>
-          <li class="reveal">
-            <span class="timeline__when">College</span>
-            <div>
-              <h3>Higher Secondary Certificate</h3>
-              <p class="muted">Government Science College, Dhaka</p>
-              <p>GPA 5.00 / 5.00 · 2017</p>
-            </div>
-          </li>
-          <li class="reveal">
-            <span class="timeline__when">School</span>
-            <div>
-              <h3>Secondary School Certificate</h3>
-              <p class="muted">Government Muslim High School, Chittagong</p>
-              <p>GPA 5.00 / 5.00 · 2015</p>
-            </div>
-          </li>
-        </ol>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- CONTACT -->
-    <section class="contact" id="contact">
+    <section class="section contact" id="contact">
       <div class="wrap">
-        <p class="kicker">04 — Contact</p>
-        <h2 class="contact__title">Have a hard problem<br>in payments or platforms?</h2>
-        <p class="contact__lede">I'm happy to talk about engineering roles, collaborations, or how something tricky in a payment flow works.</p>
-        <div class="contact__links">
-          <a class="btn btn--primary" href="mailto:tanvirulislam72@gmail.com">Email me <span aria-hidden="true">↗</span></a>
-          <a class="btn btn--ghost" href="https://www.linkedin.com/in/tanvir-ul-islam/" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="btn btn--ghost" href="https://github.com/tanveer-610" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn btn--ghost" href="Tanvirul_Islam_Resume.pdf" target="_blank" rel="noopener">Resume <span aria-hidden="true">↗</span></a>
+        <div class="contact__card reveal">
+          <div class="contact__copy">
+            <p class="kicker">Contact</p>
+            <h2>Let's build something reliable.</h2>
+            <p class="muted">Happy to talk about backend engineering, collaborations, or anything payments and distributed systems.</p>
+            <div class="email">
+              <a class="email__addr" href="mailto:tanvirulislam72@gmail.com"><svg class="ic"><use href="#i-mail"/></svg> tanvirulislam72@gmail.com</a>
+              <button class="email__copy" type="button" id="copy-email" data-email="tanvirulislam72@gmail.com" aria-label="Copy email address">
+                <svg class="ic ic-copy"><use href="#i-copy"/></svg><svg class="ic ic-check"><use href="#i-check"/></svg>
+                <span>Copy</span>
+              </button>
+            </div>
+          </div>
+          <ul class="contact__links">
+            <li><a href="https://www.linkedin.com/in/tanvir-ul-islam/" target="_blank" rel="noopener">
+              <svg class="ic"><use href="#i-linkedin"/></svg><span><b>LinkedIn</b><small>tanvir-ul-islam</small></span><svg class="ic go"><use href="#i-ext"/></svg></a></li>
+            <li><a href="https://github.com/tanveer-610" target="_blank" rel="noopener">
+              <svg class="ic"><use href="#i-github"/></svg><span><b>GitHub</b><small>tanveer-610</small></span><svg class="ic go"><use href="#i-ext"/></svg></a></li>
+            <li><a href="Tanvirul_Islam_Resume.pdf" target="_blank" rel="noopener">
+              <svg class="ic"><use href="#i-doc"/></svg><span><b>Resume</b><small>PDF · opens in a new tab</small></span><svg class="ic go"><use href="#i-ext"/></svg></a></li>
+          </ul>
         </div>
       </div>
     </section>
@@ -297,11 +453,11 @@
   <footer class="footer">
     <div class="wrap footer__inner">
       <span>© <span id="year">2026</span> Tanvirul Islam</span>
-      <span class="muted">Hand-written HTML and CSS. No framework, hosted on Netlify.</span>
-      <a href="#top">Back to top ↑</a>
+      <a href="#top" class="footer__top">Back to top ↑</a>
     </div>
   </footer>
 
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <script src="script.js" defer></script>
 </body>
 </html>
