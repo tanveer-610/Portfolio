@@ -318,7 +318,12 @@ strong, b { font-weight: 600; color: var(--text); }
   width: 56px; height: 56px; border-radius: 16px; display: grid; place-items: center;
   font: 800 1rem/1 var(--display); letter-spacing: -.02em;
 }
-.case__logo--pay { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: var(--accent-ink); }
+.case__logo--pay {
+  width: auto; padding: 0 16px; background: #ffffff; border: 1px solid var(--line-strong); box-shadow: var(--shadow-sm);
+  transition: transform .25s var(--ease), border-color .25s;
+}
+.case__logo--pay:hover { transform: translateY(-2px); border-color: var(--accent); }
+.case__logo--pay img { height: 26px; width: auto; }
 .case__logo--ota { background: linear-gradient(135deg, #DB0011, #bf802a 60%, #4badbb); color: #fff; font-size: .85rem; }
 .case__title { font-size: clamp(1.45rem, 3vw, 2.15rem); font-weight: 800; letter-spacing: -.025em; }
 .case__meta { color: var(--muted); font-size: .92rem; margin-top: 4px; }
@@ -515,6 +520,8 @@ strong, b { font-weight: 600; color: var(--text); }
   .case__head { grid-template-columns: auto 1fr; }
   .case__head .tag { grid-column: 1 / -1; justify-self: start; }
   .case__logo { width: 48px; height: 48px; border-radius: 14px; }
+  .case__logo--pay { width: auto; padding: 0 12px; }
+  .case__logo--pay img { height: 20px; }
   .about__facts { grid-template-columns: 1fr; }
   .brands { gap: 8px; flex-wrap: nowrap; }
   .brands li { flex: 1 1 0; min-width: 0; }
